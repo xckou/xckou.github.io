@@ -18,6 +18,9 @@
     }
 }
 @media only screen and (min-width: 1000px){
+    div{
+        margin:0;
+    }
     .top-nav ul{
         text-align: right;
         padding: 1em;
@@ -30,8 +33,14 @@
         float: left;
         padding: 0.5em;
     }
+    .photo-cell{
+        margin-left:0.4em;
+        margin-right:0.4em;
+        margin-bottom: 0.8em;
+    }
     .photo-cell img{
         height: 100%;
+        width: 100%;
     }
     .photo-grid{
         display: grid;
