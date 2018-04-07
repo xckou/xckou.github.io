@@ -269,6 +269,9 @@ Page Header
     padding: 30px 0
 }
 
+.vekupImg img{
+    width: 80%
+}
 /*==============================ILLUSTRATION==========================*/
 .img{
 	display:inline-block;
