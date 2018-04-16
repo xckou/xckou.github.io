@@ -14,34 +14,39 @@
 <header>
     <h1>Xiaochuan Kou</h1>
     </header>
-<div class = "container-fluid">
-    <div class = "row">
+<div  class = "container-fluid">
+    <div  class = "row">
         <div id = "coco" class = "col-sm-6 img">
         <img src="webDesignExam/images/examPic.JPG" alt="examPic">    
     </div>
-
-        <div id = "logo" class = "col-sm-6 img">        
+        <div id = "center" class = "col-sm-6 img">        
             <img src="webDesignExam/images/UMSI-logo.jpg" alt="UMSIlogo">    
-    </div>
-</div>   
+    </div>  
     </div>
 
     
-<button onclick = "hidePic()" id = "btn1">Hide Image</button>
-<button onclick = "showPic()" id = "btn2">Show Image</button>
+<button onclick = "hidePic();centerPic();" id = "btn1">Hide Image</button>
+<button onclick = "showPic();noncenterPic()" id = "btn2">Show Image</button>
 
     
     
 <script>
 function hidePic() {
-    document.getElementById("coco").style.display = "none";}
+    document.getElementById("coco").style.display = "none";
+    centerPic()
+}
     
 function centerPic() {    
-    document.getElementById("logo").style.textAlign = "center";
+    document.getElementById("center").style.marginLeft = "250px";
+   
 }
     
 function showPic() {
     document.getElementById("coco").style.display = "block";
+}
+ function noncenterPic() {    
+    document.getElementById("center").style.margin= "auto";
+   
 }
 
 
