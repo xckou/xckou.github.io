@@ -1,25 +1,25 @@
-.images{display: block;
-    
+        
+.col-sm-6{
+    height: 50%
 }
-
-.img{display: inline-block;
+.row{
+        height: 50%
+}
+.img{
+    display: inline-block;
     padding: 5%;
     border-style: solid;
     border-color: blue;
     border-width: 5px;
     text-align: center;
+    margin: 0
 }
 
 .img img{
-    height:50%;
+    width: 100%;
+    height:auto;
 }
-.coco img{
-    width: 50%;
-}
-.logo img{
-    width: 50%;
-   
-}
+
 body{
     background-image: url(..//images/circles-light.png)
 }

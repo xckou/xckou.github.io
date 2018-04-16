@@ -27,18 +27,24 @@
     </div>
 
     
-<button onclick = "showPic()" id = "btn1">Hide Image</button>
-<button onclick = "hidePic()" id = "btn2">Show Image</button>
+<button onclick = "hidePic()" id = "btn1">Hide Image</button>
+<button onclick = "showPic()" id = "btn2">Show Image</button>
 
     
     
 <script>
-function showPic() {
-    document.getElementById("coco").style.display = "none";
-}
 function hidePic() {
+    document.getElementById("coco").style.display = "none";}
+    
+function centerPic() {    
+    document.getElementById("logo").style.textAlign = "center";
+}
+    
+function showPic() {
     document.getElementById("coco").style.display = "block";
 }
+
+
    
 </script>
 </body>
