@@ -1,0 +1,72 @@
+body{
+	margin:0px;
+    font-family: 'Play', sans-serif;
+    background-color: #FAFAFA;
+}
+h1{
+	text-align: left;
+	padding-top: 50px; 
+    padding-left: 70px;
+	font-size: 1.8em;
+    color: #7674BB;
+    margin:0px;
+}
+
+h2{
+	text-align: left;
+    padding-left: 70px;
+	font-size: 1.8em;
+    color: #7674BB;
+    margin:0px;
+
+}
+h3{
+	text-align: left;
+    padding-left: 40px;
+	font-size: 1.2em;
+    color: dimgrey;
+    margin:0px;
+}
+.checklist
+{
+    margin:20px;    
+    padding-left: 10px;
+
+}
+
+.unchecked
+{
+    margin:20px;    
+    padding-left: 10px;
+
+}
+.suggestion
+{
+    margin:20px; 
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color:  #e6e6e6
+
+
+}
+.suggestion p
+{
+    padding: 0px 40px;
+    color: dimgrey;
+    line-height: 1.5em
+
+}
+ul {
+  list-style: none;
+}
+li {
+    color:dimgray;
+    padding-bottom: 5px
+}
+.checklist ul li:before {
+content:"\2611\0020"; }
+
+.unchecked ul li:before {
+content:"\2612\0020"; }
+
+
