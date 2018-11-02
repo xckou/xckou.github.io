@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta charset="utf-8">
+<title>SI 649 Individual Project - Resultant Force</title>
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/normalize.css" />   
+    <link rel="stylesheet" href="css/style.css" /> 
+	<meta charset="utf-8">
+	
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+<div style="margin:0px 300px; background: #f2f2f2">
+
+	<div style="margin:0px; padding: 30px 0px 0px 0px; text-align: center">
+		 				               	<h6></br></h6>
+
+		<h1>💪 Resultant Force 💪</h1>
+
+	</div>
+
+
+
+ 	<div class="row" style="margin:80px 90px 0px 90px;">
+
+ 		<div>
+ 			<h5>The "Force"</h5>
+ 			<h6>Imagine you are pushing a cardbox box. If you push it forward, then it will move forward, right? </h6>
+ 				<h4>That's because the "force" you created is acting on the box. How much force the box is taken depends on how much force you add on it. </h4>
+ 				               	<h6></br></h6>
+
+ 			<h6>Get it? No? Then let me explain it in another way. How about try to push the box below ⬇️</h6>
+
+
+
+ 			
+ 		</div>
+
+	 		<div style="margin-top:60px">
+	 			<h6></br></h6>
+	 			<h5>How Does "Force" Work?</h5>
+               	<h6>You are going to create a force! Select a value from the slider and see what happens.</h6>
+
+               	<h6>(Try to start with a small value and then a relatively bigger one, like 10 and 200, so the change will be more obvious!)
+
+
+               	<div class='chart' style="margin-top:20px">
+					<form>
+
+						<fieldset>
+							<label>Force:</label>
+							<input id=force1 class= slider type=range min=1 max=300 step=1 oninput='singleLine()' value=0 />
+							<output />
+						</fieldset>
+
+						</form>
+					</div>
+
+
+
+        </div>
+
+            <div id="single"  >
+                <svg width="100%" height="150px"  style="margin-top:60px" id="barTransition">
+
+
+  
+<!-- <line x1="0" y1="0" x2="200" y2="50"  stroke="red" stroke-width="2" marker-end="url(#arrow)"/> -->
+
+<!-- <path d="M20,70 T80,100 T160,80 T200,90" fill="white" stroke="red" stroke-width="2" marker-start="url(#arrow)" marker-mid="url(#arrow)" marker-end="url(#arrow)"/> -->
+</svg>
+               	
+				<p>("Newton/N" is the unit of force)</p>
+               	<h6>Excellent🎉! You just made a box moving forward!</h6>
+               	<h6>So you have already know what may happen if you give a force from one direction! Then the next question will be, what will happen if there are two, or more than two forces?</h6>
+               	<h6></br></h6>
+               	<h4>That comes to the "resultant force"</h4>
+
+
+            </div>
+
+
+
+            <div id="two" style="margin-top:60px">
+<h6></br></h6>
+            	<h5> The Idea of Resultant Force</h5>
+
+
+            	<h6>So the thing is, you want to push the box forward, however, someone👽is trying to push the box from its left side, then what will happen?</h6> 
+			
+			<div style="margin:6px 0px 40px 0px">
+
+            	<p style="color:#bfbfbf; font-style: normal;text-decoration: line-through">...You two will get into a fight</p> 
+            	<h6>You two are creating a resultant force! Woo-hoo!</h6> 
+            </div>	
+
+             
+
+
+
+			<div style="margin:6px 0px 10px 0px;padding: 30px 40px 10px 40px;">
+
+				<h3>Resultant force is "a force which is the result of two or more forces acting conjointly, or a motion which is the result of two or more motions combined".
+				</h3>
+				<p> renference: https://www.thefreedictionary.com/Resultant+force</p>
+
+			</div>
+
+            <div style="margin:6px 0px 10px 0px">
+<h6></br></h6>
+
+
+            <h6>So we know that the box will take the one single force that create by the other two. Then how strong this force is? And where does it head to? </h6>
+
+
+			<h6>Before anwsering that, let's try to modify the value of two force, and the angle between them to see what is the resultant force you create looks like ⬇️</h6>
+		</div>
+
+
+                 <div class='chart'>
+					<form>
+
+						<fieldset>
+							<label>Force A</label>
+							<input id=fforce  class= slider type=range min=1 max=150 step=1 oninput='doubleForce()' value=90 />
+							<output />
+						</fieldset>
+
+						<fieldset>
+							<label>Force B</label>
+							<input id=ffforce class= slider  type=range min=1 max=100 step=1 oninput='doubleForce()' value=55 />
+							<output />
+						</fieldset>
+
+						<fieldset>
+							<label>Angle between A and B:</label>
+							<input id=angel class= slider type=range min=0 max=180 step=1 oninput='doubleForce()' value=40 />
+							<output />
+						</fieldset>
+
+						<!-- <fieldset>
+							<label>d:</label>
+							<input id=resultant type=range min=0 max=180 step=1 oninput='doubleForce()' value=0 />
+							<output />
+						</fieldset>
+ -->
+						</form>
+						
+
+					</div>
+
+            </div>
+
+				
+
+            <div class="one-half column" id="double" >
+                <svg width="100%" height="280px" display= "inline-block">;
+                </svg>
+                            </div>
+
+						<p style="padding:0px; color: #e67300; font-size: 10rem; display: inline-block;"> — </p>
+						<p style="display: inline-block;"> ↖ The resultant force </p>
+	
+
+
+               
+ 
+      
+  <div style="margin:150px 0px 10px 0px">
+
+  	<h6>Did you notice that? When you two are trying to push the box in different direction, the box will move in a unique way that neither follow the dirextion you push, nor the other one.</h6>
+  	<figure><img src="./css/different.png" alt="two forces with differnet direction"  width="40%"><figcaption>Scale model of the
+   Two forces with differnet direction</figcaption>
+</figure> 
+
+
+<h6></br></h6>
+<h6></br></h6>
+
+	<h6>However, when you two are push the box in a totally opposite way, the box will listen to the one who is more strong 💪. If you push it in the exact same direction, then your forces are just added together and the box move way further! 💨💨</h6>
+  	<figure >
+  	<img src="./css/same1.png" alt="two forces with opposite direction" width="40%" display="inline-block">
+  	<img src="./css/same2.png" alt="two forces with the same direction" width="40%" display="inline-block">
+  	<figcaption>Forces in the opposite/same direction</figcaption>
+</figure> 
+
+
+<h6></br></h6>
+<h6></br></h6>
+<h6></br></h6>
+
+  	<h5> How to Calculate</h5>
+
+		<h6>You may ask, in this case, how can we know the value of our resultant force and the direction that it decides to take?</h6>
+            <h6>The anwser is, the formation of resultant force follows the <a href=" https://en.wikipedia.org/wiki/Parallelogram_law"><b>Parallelogram law</b></a>:</h6>
+
+
+			<h6>So for calculate the value and the direction of the resultant force, you may want to follow this equition:</h6>
+			<div style="text-align: center; margin:30px 0px 30px 0px">
+						<h3>F<sub>R</sub> = √(F<sub>A</sub>²+F<sub>B</sub>²+2F<sub>A</sub>F<sub>B</sub>cos∠θ)</h3>
+
+		</div>
+
+<div style="display: block;">
+	<div class='chart'>
+		
+		<h6></br></h6>
+				<h6>So basically, the resulant force will change based on the value of the component forces and the angle between them</h6>
+
+		<h6>Change the attributes below by moving the sliders. See whether if you can find a pattern here!</h6>
+
+		<form>
+
+			<fieldset>
+				<label>Force A</label>
+				<input id=a class= slider type=range min=0 max=10 step=1 oninput='draw()' value=8 />
+				<output />
+			</fieldset>
+
+			<fieldset>
+				<label>Force B</label>
+				<input id=b class= slider type=range min=0 max=10 step=1 oninput='draw()' value=10 />
+				<output />
+			</fieldset>
+
+			<fieldset>
+				<label>Angle between A and B:</label>
+				<input id=c class= slider type=range min=0 max=180 step=1 oninput='draw()' value=45 />
+				<output />
+			</fieldset>
+
+		</form>
+			<p  id= testdiv> {{cosValue.value}} </p>
+
+
+	</div>
+
+	
+
+	<div id="changeAngle">
+		
+
+</div>
+
+		<h6>↙What will happen if you only change the angle's value between Force A and B?</h6>
+
+
+<div style="margin: 300px 0px 0px 0px">
+
+			<h6>Did you find anything interesting🤓?</h6>
+
+
+		</div>
+
+		<div style="margin: 50px 0px 100px 0px">
+			<h6>*******************************************</h6>
+			<h6></br></h6>
+
+
+			<h6>So far, hope you can get a basic idea of resultant force and how to calculate it.</h6>
+
+<h6></br></h6>
+			<h6>Before you go!! There is a question for you. Based on what you learn today, What will you do if you want tot get a greater resultant force?</h6>
+
+
+			<h4>(Here is a hint: As what we learned from Trigonometric functions, in the duration of 0°~180°, the greater the angle, the smaller its cos value will be.)</h4> 
+
+<h6></br></h6>
+
+ <h6>Try to cover all the possibilities that we talked about before in your answer, so next time you may know how to push the box appropriately(?)🤡</h6>
+<h6><b>See you next time!!!</b></h6>
+
+</div>
+
+<div style="float: right; margin: 0px 0px 80px 0px">
+	<p> Made by Xiaochuan Kou - SI 649 F18</p>
+</div>
+	<script>
+
+	var margin = {top: 20, right: 30, bottom: 30, left: 30},
+    width = 600 - margin.left - margin.right,
+    height = 270 - margin.top - margin.bottom;
+
+    var svg = d3.select("#changeAngle")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+		// Draw chart
+	function draw() {
+
+
+
+		// Grab slider values and update their <output /> tags
+		var aNode = document.querySelector('#a');
+		var a = aNode.value;
+		aNode.parentNode.querySelector('output').textContent = a + "N";
+
+		var bNode = document.querySelector('#b');
+		var b = bNode.value;
+		bNode.parentNode.querySelector('output').textContent = b + "N";
+
+		var cNode = document.querySelector('#c');
+		var c = cNode.value;
+		cNode.parentNode.querySelector('output').textContent = c + "°";
+
+
+
+
+		var cos = Math.cos;
+		var sqrt = Math.sqrt;
+
+
+
+		var data = d3.range(-90, 90, 10).map(function(v) {
+						return {
+							v: c,
+							x: a+b,
+							y: sqrt(a*2 + b*2 + 2*a*b*cos(v))
+						};
+					});
+
+		var x = d3.scaleLinear().range([0, width]);
+		var y = d3.scaleLinear().range([height, 0]);
+
+		var f = parseInt(a);
+		var e = parseInt(b);
+		var i = parseFloat(c);
+
+		var radian = i * Math.PI / 180
+		let g = f + e;
+		let k = sqrt(f**2 + e**2 + 2*f*e*cos(radian));
+
+				const cosValue = {
+    value: cos(radian)
+   
+}
+
+var value = cosValue.value
+value = value.toFixed(2)
+
+ var testdiv = document.getElementById("testdiv");
+  testdiv.innerHTML=`<p style="color: #222; font-style:normal; float: right; padding: 170px 500px 20px 0px"><b>cos∠θ</b>:  ${value} </p>`;
+
+		console.log(g)
+		console.log(k)
+		console.log(cos(radian))
+
+		x.domain([-20, 20]);
+		y.domain([-20, 20]);
+    // Add the valueline path.
+    // svg.append("path")
+    //     .attr("class", "line")
+    //     .attr("d", valueline(data));
+
+    // Add the scatterplot
+
+    svg.selectAll("*").remove();
+
+
+    svg.selectAll("dot")
+    	.data(data)
+      	.enter().append("circle")
+      	.attr("fill", "#e67300")
+        .attr("r", 3.5)
+        .attr("cx", function(d) { return x(g); })
+        .attr("cy", function(d) { return y(k); });
+
+	svg.append('g')
+			.attr('class', 'axis axis--x')
+			.attr('transform', 'translate(0,' + height/2 + ')')
+			.call(d3.axisBottom(x));
+
+		svg.append('g')
+			.attr('class', 'axis axis--y')
+			.attr('transform', 'translate(' + width/2 + ',0)')
+			.call(d3.axisLeft(y));}
+
+
+			draw();
+
+
+	// =============================================================================
+
+
+
+	function singleLine(){
+
+
+
+		var sNode = document.querySelector('#force1');
+		var s = sNode.value;
+		sNode.parentNode.querySelector('output').textContent = s + "N";
+
+
+		let v = parseInt(s)
+
+		// var x = d3.scaleLinear().range([0, width]);
+
+
+	var svg = d3.select("#single")
+				.select('svg');
+
+		svg.selectAll("*").remove();
+
+		let l = 95+v
+		let f = 63+v
+				
+
+	var line = svg.append("line")
+	    // .data(data)
+
+
+             .attr("x1",100)  
+             .attr("y1",35)  
+             .attr("x2",l)  
+             .attr("y2",35)  
+             .attr("stroke","steelblue")  
+             .attr("stroke-width",6);
+
+    var	hand= svg.append('svg:image')
+				.attr("x",80)
+    			.attr("y",0)
+    			.attr("width",45)
+    			.attr("height",45)
+    			.attr("xlink:href", "./css/hand.png");
+
+
+	var	box	 = svg.append('svg:image')
+				.attr("x",100)
+    			.attr("y",0)
+    			.attr("width",60)
+    			.attr("height",60)
+    			.attr("xlink:href", "./css/box.png");
+
+
+
+     			
+
+    box.transition()
+     	.attr("x", l)
+     	.ease(d3.easeLinear)
+    	.duration(1100);
+
+   	   hand.transition()
+     	.attr("x", f)
+     	.ease(d3.easeLinear)
+    	.duration(1100);
+   			
+
+
+var totalLength = line.node().getTotalLength();
+
+    line.attr("stroke-dasharray", totalLength + " " + totalLength)
+      	.attr("stroke-dashoffset", totalLength)
+      	.transition()
+        .duration(1000)
+        .attr("marker-end","url(#arrow)")        
+        .ease(d3.easeLinear)
+        .attr("stroke-dashoffset", 0);}
+
+// singleLine()
+
+
+
+
+
+
+function doubleForce(){
+
+	var sin = Math.sin;
+	var cos = Math.cos;
+	var sqrt = Math.sqrt;
+
+
+
+
+	var sNode = document.querySelector('#fforce');
+		var s = sNode.value;
+		sNode.parentNode.querySelector('output').textContent = s  + "N";
+
+	var hNode = document.querySelector('#ffforce');
+		var h = hNode.value;
+		hNode.parentNode.querySelector('output').textContent = h  + "N";
+
+	var anNode = document.querySelector('#angel');
+		var an = anNode.value;
+		anNode.parentNode.querySelector('output').textContent = an + "°";
+
+	// var reNode = document.querySelector('#resultant');
+	// 	var re = reNode.value;
+	// 	reNode.parentNode.querySelector('output').textContent = re;
+
+
+		let r = parseInt(s)+100
+		let t = parseInt(h)+100
+		let z = parseInt(an)
+		let zz = z * 0.5
+
+
+		var radian = z * 0.5 * Math.PI / 180
+		var radian2 = (90-z) * Math.PI / 180
+		// let yoyo = r + t;
+		let haha  = (t-100)*sin(radian2)+(r-100)+100;	
+		let hihi  = (t-100)*cos(radian2)+100
+		console.log(haha)
+		console.log(haha)
+
+		let hahaha = haha - 15
+		let hihihi = hihi - 15
+
+		let hahaha1 = haha - 40
+		let hihihi1 = hihi - 40
+
+		let haha4  = (t-100)*sin(radian2)+100;	
+		let hihi4  = (t-100)*cos(radian2)+100
+
+
+
+
+	var svg = d3.select("#double")
+				.select('svg');
+
+		svg.selectAll("*").remove();
+
+		var mark = svg.append("marker")
+ 				.attr("id","arrow")
+ 				.attr("markerUnits", "strokeWidth")
+ 				.attr("markerWidth", "4")
+ 				.attr("markerHeight", "4")
+ 				.attr("viewBox", "0 0 12 12")
+				.attr("refX", "8")
+				.attr("refY", "6")		
+				.attr("orient", "auto")
+				;
+
+
+		var path =	mark.append("path")		
+				.attr("d", "M2,2 L10,6 L2,10 L6,6 L2,2")
+				.style("fill", "steelblue");
+
+			// mark
+			// 	.transition()
+			// 	.duration(1300)
+			// 	.attrTween("transform", translateAlong(path.node()));
+
+				
+
+	var line = svg.append("line")
+	    // .data(data)
+
+             .attr("x1",100)  
+             .attr("y1",100)  
+             .attr("x2",r)  
+             .attr("y2",100)  
+             .attr("stroke","steelblue")  
+             .attr("stroke-width",6);
+
+    var line2 = svg.append("line")
+	    // .data(data)
+
+             .attr("x1",100)  
+             .attr("y1",100)  
+             .attr("x2",t)  
+             .attr("y2",100) 
+             .attr("transform", `rotate( ${an} 100,100)`)
+             .attr("stroke","steelblue")  
+             .attr("stroke-width",6)
+
+;
+
+
+var line4 = svg.append("line")
+	    // .data(data)
+
+             .attr("x1",haha4)  
+             .attr("y1",hihi4)  
+             .attr("x2",haha)  
+             .attr("y2",hihi4) 
+             .attr("stroke","#d1e8f4")  
+             .attr("stroke-width",6)
+
+    var line5 = svg.append("line")
+	    // .data(data)
+
+             .attr("x1",r)  
+             .attr("y1",100)  
+             .attr("x2",haha)  
+             .attr("y2",hihi) 
+             .attr("stroke","#d1e8f4")  
+             .attr("stroke-width",6)      
+
+    var line3 = svg.append("line")
+
+             .attr("x1",100)  
+             .attr("y1",100)  
+             .attr("x2",haha)  
+             .attr("y2",hihi) 
+             // .attr("transform", `rotate( ${zz} 10,10)`)
+             .attr("stroke","#e67300")  
+             .attr("stroke-width",6);
+
+      
+
+
+    var	hand= svg.append('svg:image')
+				.attr("x",80)
+    			.attr("y",80)
+    			.attr("width",45)
+    			.attr("height",45)
+    			// .attr("transform", "rotate( 10 100,100)")
+
+    			.attr("xlink:href", "./css/hand.png");
+
+
+
+
+    			var	box	 = svg.append('svg:image')
+				.attr("x",80)
+    			.attr("y",80)
+    			.attr("width",60)
+    			.attr("height",60)
+    			.attr("xlink:href", "./css/box.png");
+
+    var totalLength = line.node().getTotalLength();
+
+    line.attr("stroke-dasharray", totalLength + " " + totalLength)
+      	.attr("stroke-dashoffset", totalLength)
+      	.transition()
+        .duration(500)
+        // .attr("marker-end","url(#arrow)")        
+        .ease(d3.easeLinear)
+        .attr("stroke-dashoffset", 0)
+             .attr("marker-end","url(#arrow)")        ;
+
+
+ var totalLength2 = line2.node().getTotalLength();
+
+    line2.attr("stroke-dasharray", totalLength2 + " " + totalLength2)
+      	.attr("stroke-dashoffset", totalLength2)
+      	.transition()
+      	// .attr("transform", `rotate(${an})`)
+        .duration(1000)
+        // .attr("marker-end","url(#arrow)")        
+        .ease(d3.easeLinear)
+        .attr("stroke-dashoffset", 0)
+                     .attr("marker-end","url(#arrow)");
+
+
+    var totalLength3 = line3.node().getTotalLength();
+
+    line3.attr("stroke-dasharray", totalLength3 + " " + totalLength3)
+      	.attr("stroke-dashoffset", totalLength3)
+      	.transition()
+      	// .attr("transform", `rotate(${an})`)
+        .duration(1000)
+        // .attr("marker-end","url(#arrow)")        
+        .ease(d3.easeLinear)
+        .attr("stroke-dashoffset", 0);
+
+        var totalLength4 = line4.node().getTotalLength();
+
+    line4.attr("stroke-dasharray", totalLength4 + " " + totalLength4)
+      	.attr("stroke-dashoffset", totalLength4)
+      	.transition()
+      	// .attr("transform", `rotate(${an})`)
+        .duration(1000)
+        // .attr("marker-end","url(#arrow)")        
+        .ease(d3.easeLinear)
+        .attr("stroke-dashoffset", 0);
+
+         var totalLength5 = line5.node().getTotalLength();
+
+    line5.attr("stroke-dasharray", totalLength5 + " " + totalLength5)
+      	.attr("stroke-dashoffset", totalLength5)
+      	.transition()
+      	// .attr("transform", `rotate(${an})`)
+        .duration(1000)
+        // .attr("marker-end","url(#arrow)")        
+        .ease(d3.easeLinear)
+        .attr("stroke-dashoffset", 0);
+
+    box.transition()
+     	.attr("x", hahaha)
+     	.attr("y", hihihi)
+     	.ease(d3.easeLinear)
+    	.duration(1300);
+
+
+    hand.transition()
+     	.attr("x", hahaha1)
+     	.attr("y", hihihi1)
+
+     	.ease(d3.easeLinear)
+    	.duration(1300);
+
+
+
+	
+}
+
+
+</script>
+
+
+</body>

@@ -1,0 +1,78 @@
+body{
+    background: #f7f7f7;
+}
+
+.question{
+ 
+}
+
+.answer{
+    border: 1px solid black;
+/*    display: inline-block;
+*/    background: white;  
+    min-height:150px;
+    margin:40px;
+}
+
+		path.line {
+			stroke: red;
+			stroke-width: 2px;
+			fill: none;
+		}
+		.chart {
+			width: 100%;
+			overflow: hidden;
+		}
+		form {
+			float: left;
+			width: 250px;
+		}
+		svg {
+			float: left;
+		}
+		form fieldset {
+			border: none;
+		}
+
+
+figure {
+  width: 80%;
+  height: 200px;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 40px 70px 40px 70px;
+  padding: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 8px;
+    border-radius: 2px;   
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+    background: #4080bf;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4080bf;
+    cursor: pointer;
+}
